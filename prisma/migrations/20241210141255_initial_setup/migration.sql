@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `Ticket` (
+CREATE TABLE `ticket` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(255) NOT NULL,
     `description` TEXT NOT NULL,
