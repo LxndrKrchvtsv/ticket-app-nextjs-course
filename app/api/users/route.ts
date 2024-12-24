@@ -6,15 +6,15 @@ import {getServerSession} from "next-auth";
 import options from "@/app/api/auth/[...nextauth]/options";
 
 export async function POST(request: NextRequest) {
-    const session = await getServerSession(options);
-
-    if (!session) {
-        return NextResponse.json({error: 'Not authorized'}, {status: 401});
-    }
-
-    if (session.user.role !== 'ADMIN') {
-        return NextResponse.json({error: 'Not admin'}, {status: 401});
-    }
+    // const session = await getServerSession(options);
+    //
+    // if (!session) {
+    //     return NextResponse.json({error: 'Not authorized'}, {status: 401});
+    // }
+    //
+    // if (session.user.role !== 'ADMIN') {
+    //     return NextResponse.json({error: 'Not admin'}, {status: 401});
+    // }
 
     const body = await request.json();
     const validation = userSchema.safeParse(body);
