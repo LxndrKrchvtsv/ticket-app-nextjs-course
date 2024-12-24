@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import {Ticket} from "lucide-react";
 import prisma from "@/prisma/db";
 
 const TicketForm = dynamic(() => import("@/components/TicketForm"), {ssr: false});

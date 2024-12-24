@@ -11,7 +11,7 @@ datasource db {
   relationMode = "prisma"
 }
 
-model ticket {
+model Ticket {
   id Int @id @default(autoincrement())
   title String @db.VarChar(255)
   description String @db.Text
@@ -20,7 +20,7 @@ model ticket {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   assignedToUserId Int?
-  assignedToUser user? @relation(fields: [assignedToUserId], references: [id])
+  assignedToUser User? @relation(fields: [assignedToUserId], references: [id])
 }
 
 enum Status {
@@ -35,13 +35,13 @@ enum Priority {
   HIGH
 }
 
-model user {
+model User {
   id Int @id @default(autoincrement())
   name String
   username String @unique
   password String
   role Role @default(USER)
-  assignedTicket ticket[]
+  assignedTicket Ticket[]
 }
 
 enum Role {
