@@ -1,8 +1,8 @@
 -- AlterTable
-ALTER TABLE `ticket` ADD COLUMN `assignedToUserId` INTEGER NULL;
+ALTER TABLE `Ticket` ADD COLUMN `assignedToUserId` INTEGER NULL;
 
 -- CreateTable
-CREATE TABLE `user` (
+CREATE TABLE `User` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(191) NOT NULL,
     `username` VARCHAR(191) NOT NULL,
