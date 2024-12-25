@@ -45,7 +45,7 @@ const TicketForm = ({ticket}: Props) => {
 
             setIsSubmitting(false);
 
-            router.push(`/tickets/${ticket?.id}`);
+            router.push(`/tickets`);
             router.refresh()
         } catch (error) {
             console.error(error);
